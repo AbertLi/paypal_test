@@ -9,14 +9,14 @@ import com.paypal.checkout.createorder.CurrencyCode
 import com.paypal.checkout.createorder.UserAction
 
 class App : Application() {
-    val CLIENT_ID = "At4vgzkGOFO5ApmdWY0PXXZE5GEOAuN5gpnoWOdc-P6dz3woIvk5gbgh"
+    val CLIENT_ID = "ClientID"
     override fun onCreate() {
         super.onCreate()
         val config = CheckoutConfig(
             application = this,
             clientId = CLIENT_ID,//YOUR_CLIENT_ID
             environment = Environment.SANDBOX,
-            currencyCode = CurrencyCode.USD,//选择美元
+            currencyCode = CurrencyCode.USD,
             userAction = UserAction.PAY_NOW,
             settingsConfig = SettingsConfig(
                 loggingEnabled = true,
